@@ -1,23 +1,57 @@
+/* ----- ----- DATOS GENERALES ----- ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --color-day    : #FFF;
-    --color-night  :#181814;
-    --color-dark-alt: #59595a;
+/* ----- ----- VARIABLES ----- ----- */
 
-    --body-font: 'Ubuntu', sans-serif;
+:root {
+    --color-day                 : #FFFFFF;
+    --color-night               : #0c093c;
+    --color-dark-alt            : #59595a;
+    --color-red                 : #fe385f;
+
+    --color-header              : #fad6d6;
+    --color-header-inverse      : #776edd;
+  
+    --color-background          : #2f336b;
+    --color-background-inverse  : #b8badf;
+  
+    --word-font                 : 40px;
+    --word-height               : 40px;
+    --word-timing               : cubic-bezier(0.8, 0.01, 0.975, 0.71);
+    --word-duration             : 0.8s;
+
+    --body-font                 : 'Ubuntu', sans-serif;
+}
+
+/* ----- ----- WEBSITE ----- ----- */
+
+body {    
+    font-family: 'Teko', sans-serif;
+    color: var(--color-dark-alt);
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
+    background: var(--color-day);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 80px;
+    padding: 25px 0 15px;
+    background: var(--color-header);
+    width: 100%;
+    text-align: center;
+    color: var(--color-night);
+    z-index: 1;
 }
 
 input[type="checkbox"] {
@@ -76,29 +110,23 @@ input[type="checkbox"]:checked ~ .check:after {
     transform: translateX(0px);
 }
 
-.title {
-    font-family: 'Teko', sans-serif;
-    opacity: .9;
-    margin: 10px;
-    color: var(--color-dark-alt);
-    z-index: 1;
-}
-
 /* ----- ----- Se agrego nuevos estilos para reses sociales ----- ----- */
 /* ------------------------- */
 /* SOCIAL MEDIA */
 /* ------------------------- */
 .social-media-footer {
-    --font-color: rgb(255, 255, 255);
-    margin-top: 0.9375rem;
+    --font-color: var(--color-header);
+    --font-size: 0.8rem;
+    z-index: 1;
     font-family: var(--body-font);
   }
   
   .social-columns {
     display: flex;
     justify-content: center;
+    padding-top: 0.5rem;
     padding-bottom: 0.625rem;
-    font-size: 0.7rem;
+    font-size: var(--font-size);
     color: var(--font-color);
     font-family: var(--body-font);
     width: 100%;
@@ -113,21 +141,25 @@ input[type="checkbox"]:checked ~ .check:after {
     text-decoration: none;
     color: var(--font-color);
   }
+
+  .social-columns a:hover {
+    text-decoration: underline;
+  }
   
+  /* GITHUB */
   .github-code {
     color: var(--font-color);
     font-size: 0.8rem;
     text-align: center;
-    margin-bottom: 0.625rem;
   }
   
   .github-code a {
     text-decoration: none;
     color: var(--font-color);
   }
-  
+
   .github-code a:hover {
-    text-decoration: underline;
+      text-decoration: underline;
   }
 
   /* ----- ----- Final ----- ----- */
