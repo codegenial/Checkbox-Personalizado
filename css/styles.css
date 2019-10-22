@@ -8,6 +8,8 @@
     --color-day    : #FFF;
     --color-night  :#181814;
     --color-dark-alt: #59595a;
+
+    --body-font: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -74,11 +76,56 @@ input[type="checkbox"]:checked ~ .check:after {
     transform: translateX(0px);
 }
 
-.title,
-small {
+.title {
     font-family: 'Teko', sans-serif;
     opacity: .9;
     margin: 10px;
     color: var(--color-dark-alt);
     z-index: 1;
 }
+
+/* ----- ----- Se agrego nuevos estilos para reses sociales ----- ----- */
+/* ------------------------- */
+/* SOCIAL MEDIA */
+/* ------------------------- */
+.social-media-footer {
+    --font-color: rgb(255, 255, 255);
+    margin-top: 0.9375rem;
+    font-family: var(--body-font);
+  }
+  
+  .social-columns {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.625rem;
+    font-size: 0.7rem;
+    color: var(--font-color);
+    font-family: var(--body-font);
+    width: 100%;
+  }
+  
+  .social-columns .column {
+    padding: 0.4rem;
+    text-align: center;
+  }
+  
+  .social-columns a {
+    text-decoration: none;
+    color: var(--font-color);
+  }
+  
+  .github-code {
+    color: var(--font-color);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0.625rem;
+  }
+  
+  .github-code a {
+    text-decoration: none;
+    color: var(--font-color);
+  }
+  
+  .github-code a:hover {
+    text-decoration: underline;
+  }
